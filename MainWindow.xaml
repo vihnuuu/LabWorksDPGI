@@ -6,13 +6,26 @@
         xmlns:local="clr-namespace:DPGI_lab2"
         mc:Ignorable="d"
         Title="TextEditor" Height="350" Width="500">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="LinearPanelBrush">
+            <GradientStop Color="Yellow" Offset="0"></GradientStop>
+            <GradientStop Color="Cyan" Offset="0.5"></GradientStop>
+            <GradientStop Color="Yellow" Offset="0.8"></GradientStop>
+        </LinearGradientBrush>
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
     <Grid ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" >
+            <StackPanel Grid.Row="0" Orientation="Horizontal" Background="{StaticResource LinearPanelBrush}">
                 <Button Width="50" Height="50">
                     <Image ToolTip="Open" Source="/images/Open.png"></Image>
                 </Button>
@@ -28,14 +41,14 @@
             </StackPanel>
         </Border>
         <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
-            <Grid>
+            <Grid  Background="{StaticResource LinearPanelBrush}">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBox Grid.Row="0" Margin="10" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible"></TextBox>
                 <DockPanel Grid.Row="1" Margin="10 5 10 10">
-                    <Button Width="30" DockPanel.Dock="Bottom">OK</Button>
+                    <Button Width="30" DockPanel.Dock="Bottom" Style="{x:Null}">OK</Button>
                 </DockPanel>
             </Grid>
         </Border>
