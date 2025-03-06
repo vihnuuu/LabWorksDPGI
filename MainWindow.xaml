@@ -5,28 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DPGI_lab2"
         mc:Ignorable="d"
-        Title="Task 1.3 - WrapPanel" Height="220" Width="650">
-    <WrapPanel Margin="111,50,111,45">
-        <Label>Label</Label>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-
-        <Label>Label</Label>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-
-        <Button Margin="175, 8" Width="50">Button</Button>
-    </WrapPanel>
+        Title="Task 1.4 - DockPanel" Height="220" Width="500">
+    <DockPanel LastChildFill="False">
+        <Label  DockPanel.Dock="Top" HorizontalAlignment="Center">Label</Label>
+        <TextBox DockPanel.Dock="Right" Width="200">TextBox</TextBox>
+        <TextBox DockPanel.Dock="Left" Width="200">TextBox</TextBox>
+        <Button  DockPanel.Dock="Bottom" Width="70" Height="20" Margin="0 0 0 30">Button</Button>
+    </DockPanel>
 </Window>
