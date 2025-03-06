@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DPGI_lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Task 1" Height="450" Width="800">
+    <Grid ShowGridLines="True">
+        <!-- 3 рядки -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="4*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- 3 стовпчики -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!-- 3 елементи -->
+        <Label Grid.Row="0" Grid.Column="1">Label</Label>
+        <TextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">TextBox</TextBox>
+        <Button Grid.Row="2" Grid.Column="1">Button</Button>
     </Grid>
 </Window>
+
